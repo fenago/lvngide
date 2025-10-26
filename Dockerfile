@@ -19,20 +19,11 @@ RUN apt-get update && apt-get install -y \
 # Set working directory
 WORKDIR /app
 
-# Copy package files first for better caching
-COPY package.json yarn.lock .yarnrc.yml ./
-COPY .yarn ./.yarn
-
-# Copy workspace package.json files
-COPY applications/browser/package.json ./applications/browser/
-COPY applications/electron/package.json ./applications/electron/
-COPY theia-extensions/product/package.json ./theia-extensions/product/
+# Copy all source code (yarn workspaces needs full source to resolve dependencies)
+COPY . .
 
 # Install dependencies
 RUN yarn install --frozen-lockfile
-
-# Copy source code
-COPY . .
 
 # Build the extensions
 RUN yarn build:extensions
