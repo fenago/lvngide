@@ -4,6 +4,9 @@
 # Stage 1: Build stage
 FROM node:20-bullseye as builder
 
+# Enable Corepack to use Yarn 4.x from package.json
+RUN corepack enable
+
 # Install system dependencies required for native modules
 RUN apt-get update && apt-get install -y \
     python3 \
@@ -22,8 +25,8 @@ WORKDIR /app
 # Copy all source code (yarn workspaces needs full source to resolve dependencies)
 COPY . .
 
-# Install dependencies
-RUN yarn install --frozen-lockfile
+# Install dependencies (Corepack will use Yarn 4.x from .yarnrc.yml)
+RUN yarn install --immutable
 
 # Build the extensions
 RUN yarn build:extensions
