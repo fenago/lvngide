@@ -143,7 +143,8 @@ export class TheiaIDEGettingStartedWidget extends GettingStartedWidget {
 
     protected renderHeader(): React.ReactNode {
         return <div className='gs-header'>
-            <h1>Eclipse Theia <span className='gs-blue-header'>IDE</span></h1>
+            <h1>CodeSphere</h1>
+            <p className='gs-sub-header'>by LVNG.ai (Dr. Ernesto Lee and Matty Squarzoni)</p>
             {this.renderVersion()}
         </div>;
     }
@@ -161,10 +162,13 @@ export class TheiaIDEGettingStartedWidget extends GettingStartedWidget {
     }
 
     protected renderAIBanner(): React.ReactNode {
-        const framework = super.renderAIBanner();
-        if (React.isValidElement<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>>(framework)) {
-            return React.cloneElement(framework, { className: 'gs-section' });
-        }
-        return framework;
+        return <div className='gs-section'>
+            <h3 className='gs-section-header'>
+                🚀 AI Support in CodeSphere is available! ✨
+            </h3>
+            <div>
+                Open the AI Chat View now to learn how to start! ✨
+            </div>
+        </div>;
     }
 }

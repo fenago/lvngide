@@ -1,8 +1,8 @@
 {
   "private": true,
   "name": "theia-ide-product-ext",
-  "version": "1.65.100",
-  "description": "Eclipse Theia IDE Product Branding",
+  "version": "1.0.1",
+  "description": "CodeSphere by Dr. Ernesto Lee - Product Branding",
   "dependencies": {
     "@theia/core": "1.65.1",
     "@theia/getting-started": "1.65.1",

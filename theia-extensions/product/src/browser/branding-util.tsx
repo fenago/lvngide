@@ -30,17 +30,13 @@ function BrowserLink(props: ExternalBrowserLinkProps): JSX.Element {
 export function renderWhatIs(windowService: WindowService): React.ReactNode {
     return <div className='gs-section'>
         <h3 className='gs-section-header'>
-            What is this?
+            What is CodeSphere?
         </h3>
         <div>
-            The Eclipse Theia IDE is a modern and open IDE for cloud and desktop. The Theia IDE is based on the <BrowserLink text="Theia platform"
-            url="https://theia-ide.org" windowService={windowService} ></BrowserLink>.
+            CodeSphere by Dr. Ernesto Lee is a privacy-first, AI-powered development environment that provides a complete IDE experience.
         </div>
         <div>
-            The IDE is available as a <BrowserLink text="downloadable desktop application" url="https://theia-ide.org//#theiaidedownload"
-            windowService={windowService} ></BrowserLink>. You can also <BrowserLink text="try the latest version of the Theia IDE online"
-            url="https://try.theia-cloud.io/" windowService={windowService} ></BrowserLink>. The online test version is limited to 30 minutes per session and hosted
-            via <BrowserLink text="Theia Cloud" url="https://theia-cloud.io/" windowService={windowService} ></BrowserLink>.
+            CodeSphere offers integrated AI capabilities designed for developers who value privacy and want powerful coding assistance without sending their code to external servers.
         </div>
     </div>;
 }
@@ -48,17 +44,15 @@ export function renderWhatIs(windowService: WindowService): React.ReactNode {
 export function renderExtendingCustomizing(windowService: WindowService): React.ReactNode {
     return <div className='gs-section'>
         <h3 className='gs-section-header'>
-            Extending/Customizing the Theia IDE
+            Extending CodeSphere
         </h3>
         <div >
-            You can extend the Theia IDE at runtime by installing VS Code extensions, e.g. from the <BrowserLink text="OpenVSX registry" url="https://open-vsx.org/"
+            You can extend CodeSphere at runtime by installing VS Code extensions from the <BrowserLink text="OpenVSX registry" url="https://open-vsx.org/"
             windowService={windowService} ></BrowserLink>, an open marketplace for VS Code extensions. Just open the extension view or browse <BrowserLink
             text="OpenVSX online" url="https://open-vsx.org/" windowService={windowService} ></BrowserLink>.
         </div>
         <div>
-            Furthermore, the Theia IDE is based on the flexible Theia platform. Therefore, the Theia IDE can serve as a <span className='gs-text-bold'>template</span> for building
-            custom tools and IDEs. Browse <BrowserLink text="the documentation" url="https://theia-ide.org/docs/composing_applications/"
-            windowService={windowService} ></BrowserLink> to help you customize and build your own Eclipse Theia-based product.
+            CodeSphere provides a solid foundation for AI-powered development with complete customization capabilities and extensibility.
         </div>
     </div>;
 }
@@ -69,9 +63,8 @@ export function renderSupport(windowService: WindowService): React.ReactNode {
             Professional Support
         </h3>
         <div>
-            Professional support, implementation services, consulting and training for building tools like Theia IDE and for building other tools based on Eclipse Theia is
-            available by selected companies as listed on the <BrowserLink text=" Theia support page" url="https://theia-ide.org/support/"
-            windowService={windowService} ></BrowserLink>.
+            Professional support, implementation services, consulting and training for CodeSphere is
+            available upon request. Please visit the CodeSphere repository or contact Dr. Ernesto Lee for more information.
         </div>
     </div>;
 }
@@ -82,17 +75,12 @@ export function renderTickets(windowService: WindowService): React.ReactNode {
             Reporting feature requests and bugs
         </h3>
         <div >
-            The features in the Eclipse Theia IDE are based on Theia and the included
-            extensions/plugins. For bugs in Theia please consider opening an issue in
-            the <BrowserLink text="Theia project on Github" url="https://github.com/eclipse-theia/theia/issues/new/choose"
-                windowService={windowService} ></BrowserLink>.
-        </div>
-        <div>
-            Eclipse Theia IDE only packages existing functionality into a product and installers
-            for the product. If you believe there is a mistake in packaging, something needs to be added to the
-            packaging or the installers do not work properly,
+            If you encounter any issues, have feature requests, or find bugs in CodeSphere,
             please <BrowserLink text="open an issue on Github" url="https://github.com/eclipse-theia/theia-ide/issues/new/choose"
                 windowService={windowService} ></BrowserLink> to let us know.
+        </div>
+        <div>
+            Your feedback helps us improve CodeSphere and provide a better development experience for everyone.
         </div>
     </div>;
 }
@@ -103,7 +91,7 @@ export function renderSourceCode(windowService: WindowService): React.ReactNode 
             Source Code
         </h3>
         <div >
-            The source code of Eclipse Theia IDE is available
+            The source code of CodeSphere is available
             on <BrowserLink text="Github" url="https://github.com/eclipse-theia/theia-ide"
                 windowService={windowService} ></BrowserLink>.
         </div>
@@ -117,7 +105,7 @@ export function renderDocumentation(windowService: WindowService): React.ReactNo
         </h3>
         <div >
             Please see the <BrowserLink text="documentation" url="https://theia-ide.org/docs/user_getting_started/"
-            windowService={windowService} ></BrowserLink> on how to use the Theia IDE.
+            windowService={windowService} ></BrowserLink> on how to use CodeSphere.
         </div>
     </div>;
 }
@@ -143,7 +131,7 @@ export function renderDownloads(): React.ReactNode {
             Updates and Downloads
         </h3>
         <div className='gs-action-container'>
-            You can update Eclipse Theia IDE directly in this application by navigating to
+            You can update CodeSphere directly in this application by navigating to
             File {'>'} Preferences {'>'} Check for Updates… Moreover the application will check for updates
             after each launch automatically.
         </div>
