@@ -82,9 +82,6 @@ codesphere-logo-32.png
 codesphere-logo-48.png
 codesphere-logo-512.png
 
-# Electron app (not needed for browser deployment)
-applications/electron/
-
 # Build logs
 /tmp
 *.log
