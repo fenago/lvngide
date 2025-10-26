@@ -1,0 +1,90 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# CI/CD
+.github
+.gitlab-ci.yml
+
+# Documentation
+*.md
+README.md
+CHANGELOG.md
+LICENSE
+docs/
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts (will be built in Docker)
+**/lib
+**/dist
+**/build
+**/.build
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependencies (will be installed in Docker)
+**/node_modules
+
+# Test
+**/__tests__
+**/__mocks__
+**/test
+**/tests
+*.test.*
+*.spec.*
+coverage/
+.nyc_output
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Scripts not needed in production
+scripts/
+git-push.sh
+
+# Local development files
+.env.local
+.env.*.local
+
+# Icon source files (keep only final built icons)
+codesphere-logo-512.svg
+codesphere-temp.icns
+create-favicon.js
+128-128.ico
+16-16.ico
+256-256.ico
+32-32.ico
+48-48.ico
+512-512.ico
+codesphere-logo-128.png
+codesphere-logo-16.png
+codesphere-logo-256.png
+codesphere-logo-32.png
+codesphere-logo-48.png
+codesphere-logo-512.png
+
+# Electron app (not needed for browser deployment)
+applications/electron/
+
+# Build logs
+/tmp
+*.log
