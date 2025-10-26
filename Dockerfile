@@ -40,6 +40,9 @@ RUN yarn download:plugins || true
 # Stage 2: Production stage
 FROM node:20-bullseye-slim
 
+# Enable Corepack for Yarn 4.x (needed at runtime)
+RUN corepack enable
+
 # Install runtime dependencies
 RUN apt-get update && apt-get install -y \
     git \
@@ -59,7 +62,7 @@ RUN useradd -m -u 1001 -s /bin/bash theia
 # Set working directory
 WORKDIR /app
 
-# Copy built application from builder
+# Copy built application from builder (includes node_modules with all dependencies)
 COPY --from=builder --chown=theia:theia /app /app
 
 # Create plugins directory
