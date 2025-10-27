@@ -25,6 +25,9 @@ WORKDIR /app
 # Copy all source code (yarn workspaces needs full source to resolve dependencies)
 COPY . .
 
+# Remove Yarn install state to ensure fresh install in Docker
+RUN rm -f .yarn/install-state.gz
+
 # Install dependencies (Corepack will use Yarn 4.x from .yarnrc.yml)
 RUN yarn install --immutable
 
