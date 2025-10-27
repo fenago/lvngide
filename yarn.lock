@@ -3171,29 +3171,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@theia/ai-mcp-server@npm:1.65.1":
-  version: 1.65.1
-  resolution: "@theia/ai-mcp-server@npm:1.65.1"
-  dependencies:
-    "@modelcontextprotocol/sdk": "npm:^1.15.1"
-    "@theia/core": "npm:1.65.1"
-    "@theia/workspace": "npm:1.65.1"
-    zod: "npm:^3.23.8"
-  checksum: 10c0/512ca7d0e7e67385aa0e4691419ecb366fda48ce38ee2378b39a8e163155f6d9b4f3089b2469254fe4363fa4746ab7273d9ae97968959f34ea312496b133120f
-  languageName: node
-  linkType: hard
-
-"@theia/ai-mcp-ui@npm:1.65.1":
-  version: 1.65.1
-  resolution: "@theia/ai-mcp-ui@npm:1.65.1"
-  dependencies:
-    "@theia/ai-core": "npm:1.65.1"
-    "@theia/ai-mcp": "npm:1.65.1"
-    "@theia/core": "npm:1.65.1"
-  checksum: 10c0/8ba8f0fc56b0abd996e2b05aa409518b1af477f94ec8483315c46ff267c8ae1f84e707789d51c8b7de7afa1de677b6d48daea7b44cf5d1a43fd913ab65e2dd32
-  languageName: node
-  linkType: hard
-
 "@theia/ai-mcp@npm:1.65.1":
   version: 1.65.1
   resolution: "@theia/ai-mcp@npm:1.65.1"
@@ -19172,9 +19149,6 @@ __metadata:
     "@theia/ai-huggingface": "npm:1.65.1"
     "@theia/ai-ide": "npm:1.65.1"
     "@theia/ai-llamafile": "npm:1.65.1"
-    "@theia/ai-mcp": "npm:1.65.1"
-    "@theia/ai-mcp-server": "npm:1.65.1"
-    "@theia/ai-mcp-ui": "npm:1.65.1"
     "@theia/ai-ollama": "npm:1.65.1"
     "@theia/ai-openai": "npm:1.65.1"
     "@theia/ai-scanoss": "npm:1.65.1"
