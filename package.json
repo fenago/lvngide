@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.0.12",
+  "version": "1.0.14",
   "license": "MIT",
   "packageManager": "yarn@4.9.2",
   "author": "Rob Moran <github@thegecko.org>",
@@ -82,8 +82,6 @@
   "resolutions": {
     "@types/puppeteer": "^5.4.0",
     "@yarnpkg/parsers": "3.0.0-rc.44",
-    "@theia/ai-mcp": "link:./fake-mcp-package",
-    "@theia/ai-mcp-server": "link:./fake-mcp-package",
-    "@theia/ai-mcp-ui": "link:./fake-mcp-package"
+    "@modelcontextprotocol/sdk": "1.11.4"
   }
 }
