@@ -1,0 +1,6 @@
+{
+  "name": "@theia/ai-mcp-stub",
+  "version": "1.0.0",
+  "description": "Empty stub to replace MCP packages",
+  "main": "index.js"
+}
