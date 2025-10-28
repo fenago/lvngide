@@ -2,5 +2,11 @@
   "name": "@theia/ai-mcp-stub",
   "version": "1.0.0",
   "description": "Empty stub to replace MCP packages",
-  "main": "index.js"
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./lib/common": "./common.js",
+    "./lib/common/mcp-server-manager": "./mcp-server-manager.js",
+    "./lib/common/mcp-preferences": "./mcp-preferences.js"
+  }
 }
