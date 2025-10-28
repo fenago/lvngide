@@ -1,25 +1,58 @@
-image:
-  file: .gitpod.dockerfile
-ports:
-  - port: 3000 # Theia
-  - port: 3030 # VS Code extension tests
-  - port: 5900
-    onOpen: ignore
-  - port: 6080
-    onOpen: ignore
-  - port: 9229 # Node.js debug port
-    onOpen: ignore
-  - port: 9339 # Node.js debug port
-    onOpen: ignore
-tasks:
-  - init: yarn --network-timeout 100000
-    command: >
-      jwm &
-      yarn electron start
+# Gitpod configuration for CodeSphere IDE
 
-github:
-  prebuilds:
-    pullRequestsFromForks: true
+# Use a standard workspace image
+image: gitpod/workspace-full:latest
+
+# Tasks to run on workspace start
+tasks:
+  - name: Install & Build
+    init: |
+      # Enable Corepack for Yarn 4
+      corepack enable
+
+      # Install dependencies
+      echo "📦 Installing dependencies..."
+      yarn install
+
+      # Build extensions
+      echo "🔨 Building extensions..."
+      yarn build:extensions
+
+      # Build browser application
+      echo "🌐 Building browser application..."
+      cd applications/browser && yarn build
+      cd ../..
+
+      # Download plugins
+      echo "🔌 Downloading plugins..."
+      yarn download:plugins || true
+
+      echo "✅ Build complete!"
+    command: |
+      # Start the application
+      echo "🚀 Starting CodeSphere IDE..."
+      cd applications/browser
+      yarn start --hostname=0.0.0.0 --port=3000
+
+# Ports to expose
+ports:
+  - port: 3000
+    onOpen: open-browser
+    visibility: public
+    description: CodeSphere IDE
+
+# VS Code extensions to install (optional)
 vscode:
   extensions:
-    - dbaeumer.vscode-eslint@2.0.0:CwAMx4wYz1Kq39+1Aul4VQ==
+    - dbaeumer.vscode-eslint
+
+# GitHub prebuilds for faster workspace startup
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: false
+    addCheck: false
+    addComment: false
+    addBadge: false
