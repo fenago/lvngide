@@ -28,6 +28,9 @@ COPY . .
 # Remove Yarn install state to ensure fresh install in Docker
 RUN rm -f .yarn/install-state.gz
 
+# Delete any old generated code from local build
+RUN rm -rf applications/browser/src-gen applications/electron/src-gen
+
 # Install dependencies (Corepack will use Yarn 4.x from .yarnrc.yml)
 RUN yarn install --immutable
 

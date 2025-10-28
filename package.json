@@ -1,6 +1,6 @@
 {
   "private": true,
-  "version": "1.0.9",
+  "version": "1.0.11",
   "license": "MIT",
   "packageManager": "yarn@4.9.2",
   "author": "Rob Moran <github@thegecko.org>",
